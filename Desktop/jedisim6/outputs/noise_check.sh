@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#SBATCH -p bigmem
+#SBATCH --mem=120G
+#SBATCH --time=02:00:00
+
+
+python -u noise_check.py ${1} ${1}/${1}_config.txt > ./${1}/mags.txt
